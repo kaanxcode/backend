@@ -70,12 +70,57 @@
                     <td><?php echo $item->id ?></td>
                   </tr>
                   <?php } ?>
+                  
                   </tbody>
                   </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
+           
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Şube İsmi</th>
+                    <th>Adres</th>
+                    <th>Oluşturma Tarihi</th>
+                    
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php foreach($branches as $branch) { ?>
+                  <tr>
+                    <td><?php echo $branch->id ?></td>
+                    <td><?php echo $branch->title ?></td>
+                    <td><?php echo $branch->address ?></td>
+                    <td><?php echo $branch->created_at ?></td>
+                    
+                  </tr>
+                  <?php } ?>
+                  
+                  </tbody>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+           
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -90,3 +135,5 @@
   <!-- FOOTER BURADA -->
 
   <?php $this->load->view("includes/footer.php") ?>
+
+           
