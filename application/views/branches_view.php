@@ -39,6 +39,7 @@
 
     <!-- Main content -->
     <section class="content">
+      
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -52,22 +53,20 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Ürün Kategorisi</th>
-                    <th>Durum</th>
+                    <th>Şube İsmi</th>
+                    <th>Adres</th>
                     <th>Oluşturma Tarihi</th>
-                    <th>İşlemler</th>
+                    
                   </tr>
                   </thead>
                   <tbody>
-                  <?php foreach($items as $item) { ?>
-
+                  <?php foreach($branches as $branch) { ?>
                   <tr>
-                    <td><?php echo $item->id ?></td>
-                    <td><?php echo $item->title ?>
-                    </td>
-                    <td><?php echo $item->is_active == 0? "Pasif":"Aktif" ?></td>
-                    <td><?php echo $item->created_at ?></td>
-                    <td><?php echo $item->id ?></td>
+                    <td><?php echo $branch->id ?></td>
+                    <td><?php echo $branch->title ?></td>
+                    <td><?php echo $branch->address ?></td>
+                    <td><?php echo $branch->created_at ?></td>
+                    
                   </tr>
                   <?php } ?>
                   
@@ -84,7 +83,6 @@
         </div>
         <!-- /.row -->
       </div>
-      
       <!-- /.container-fluid -->
     </section>
   </div>

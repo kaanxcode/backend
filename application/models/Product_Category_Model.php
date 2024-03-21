@@ -3,7 +3,7 @@ class Product_Category_Model extends CI_Model {
     public function __construct() {
         parent::__construct();
     }
-    public function save($data = array()) {
+    public function add($data = array()) {
         return $this->db->insert("product_categories", $data);
     }
     public function getAll($order="id ASC") {

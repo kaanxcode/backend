@@ -12,6 +12,6 @@ class Branches extends CI_Controller {
 
     $viewData = new stdClass();
     $viewData->branches = $branches;
-    $this->load->view('welcome_message', $viewData);
+    $this->load->view('branches_view', $viewData);
 }
 }
