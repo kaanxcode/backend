@@ -25,25 +25,30 @@
           <!-- Horizontal Form -->
           <div class="card card-info">
             <div class="card-header">
-              <h3 class="card-title">Yeni Kategori Ekle</h3>
+              <h3 class="card-title">Ürün Kategorisi Düzenleme İşlemi</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form class="form-horizontal" method="POST" action="<?php echo base_url("Product_Category/save") ?>">
+            <form class="form-horizontal" method="POST" action="<?php echo base_url("Product_Category/update/$item->id") ?>">
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="title" class="col-sm-2 col-form-label">Ürün Kategorisi Adı:</label>
                       <div class="col-sm-10">
-                        <input type="text" name="title" class="form-control" id="title" placeholder="Ürün Kategorisinin Adını Giriniz.">
+                      <input type="text" name="title" class="form-control" id="category" value="<?php echo $item->title; ?>" >
+
                         <?php if (isset($formError)) { ?>
                           <small><?php echo form_error("title"); ?></small>
-                        <?php } ?>
+                        <?php }
+                        
+                        print_r($item);
+                        
+                        ?>
                       </div>
                     </div>
                   </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <button type="submit" class="btn btn-info">Kaydet</button>
+                <button type="submit" class="btn btn-info">Güncelle</button>
                 <a href="<?php echo base_url("Product_Category") ?>" class="btn btn-default float-right">Vazgeç</a>
               </div>
               <!-- /.card-footer -->

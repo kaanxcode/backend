@@ -48,9 +48,33 @@
                       <td><?php echo $item->id ?></td>
                       <td><?php echo $item->title ?></td>
                       <td><?php echo $item->is_active == 0 ? "Pasif" : "Aktif" ?></td>
-                      <td><?php echo $item->created_at ?></td>
                       <td>
-                        <!-- İşlem butonlarını buraya ekleyebilirsiniz -->
+                      <?php
+
+
+                        echo dateTimeFormat($item->created_at);
+
+
+                        
+                      
+                      
+                      
+                      
+                      ?></td>
+                      <td>
+
+<a href="<?php echo base_url("Product_Category/delete/$item->id")?>" class="btn btn-danger btn-s"> Sil  <i class="fas fa-trash"></i></a>
+<a href="<?php echo base_url("Product_Category/update_form/$item->id")?>" class="btn btn-warning btn-s"> Güncelle <i class="fas fa-pencil-alt"></i></a>
+
+
+
+                       
+
+
+
+
+
+
                       </td>
                     </tr>
                   <?php } ?>
