@@ -52,6 +52,22 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url("Brands")?>" class="nav-link">
+              <i class="nav-icon fas fa-circle nav-icon"></i>
+              <p>
+                Markalar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url("Users")?>" class="nav-link">
+              <i class="nav-icon fas fa-circle nav-icon"></i>
+              <p>
+                Kullanıcılar
+              </p>
+            </a>
+          </li>
           <!-- <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
